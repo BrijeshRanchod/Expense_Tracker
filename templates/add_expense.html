@@ -1,0 +1,24 @@
+<!-- templates/add_expense.html -->
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+
+{% extends "base.html" %}
+{% block content %}
+<h2>Add Expense</h2>
+<form method="POST">
+    {{ form.hidden_tag() }}
+    <p>
+        {{ form.amount.label }}<br>
+        {{ form.amount }}
+    </p>
+    <p>
+        {{ form.category.label }}<br>
+        {{ form.category }}
+    </p>
+    <p>
+        {{ form.description.label }}<br>
+        {{ form.description }}
+    </p>
+    <p>{{ form.submit }}</p>
+</form>
+<a href="{{ url_for('expenses') }}">Back to Expenses</a>
+{% endblock %}
