@@ -11,23 +11,7 @@ def run_command(command, shell=False):
         sys.exit(1)
 
 def main():
-    # Step 1: Clone the repository
-    repo_url = "https://github.com/BrijeshRanchod/Expense_Tracker.git"
-    print(f"Cloning repository {repo_url}...")
-    run_command(["git", "clone", repo_url])
-
-    # Step 2: Install Python (Platform dependent)
-    if sys.platform == "win32":
-        print("Installing Python for Windows...")
-        run_command(["winget", "install", "Python.Python.3.10"], shell=True)
-    elif sys.platform == "darwin":
-        print("Installing Python for macOS...")
-        run_command(["brew install python3"], shell=True)
-    elif sys.platform == "linux" or sys.platform == "linux2":
-        print("Installing Python for Linux...")
-        run_command(["sudo", "apt", "update"])
-        run_command(["sudo", "apt", "install", "python3"])
-
+    
     # Step 3: Navigate to the project directory
     project_dir = "Expense_Tracker"
     print(f"Navigating to {project_dir}...")
