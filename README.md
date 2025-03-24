@@ -1,5 +1,5 @@
 # Clone the repository
-git clone https://github.com/BrijeshRanchod/TodoApp.git
+git clone https://github.com/BrijeshRanchod/Expense_Tracker.git
 
 # Install Python 
 # For Windows
